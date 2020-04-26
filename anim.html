@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Realtime: THREE.js</title>
+<style type="text/css">
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	/* background:#333 ; */
+}
+canvas{
+	position:absolute;
+	top:1;
+	left:1;
+}
+#imgFrame {
+	width: 900px;
+	height: 260px;
+}
+#frame {
+	width: 1200px;
+}
+#hoge {
+	width: 200px;
+	float: left;
+}
+#CVThree{
+	margin-left: 300px;
+	width: 600px;
+	height: 600px;
+	border: solid;
+}
+#formula{
+	float:left;
+}
+#bes{
+	float:right;
+}
+</style>
+<script src="three.js"></script>			<!--3D描画用ライブラリ-->
+<script src="html5slider.js"></script>		<!--firefoxでのスライダー使用で必要-->
+<script src="setCircleVec3.js"></script>
+<script src="anim.js"></script>
+<script src="functions.js"></script>
+<script src="stats.min.js"></script>
+
+</head>
+<body onload="main()">
+<div id="imgFrame">
+	<img src="formulaImg.bmp" alt="formula" width="300" height="150" id="formula">
+	<img src="d.png" alt="formula" width="600" height="150" id="bes">
+	<div id="CVThree"></div>
+</div>
+<div id="frame">
+	<div id="hoge">
+	<form name="formOne" action="#top">
+		<!--基準円の数:<input type="text" name="CircNum" value="0.0"><br>
+		基準線の数:<input type="text" name="LineNum" value="0.0"><br>-->
+		<input type="button" name="Num10" value="0,1">
+		<input type="button" name="Num20" value="0,2">
+		<input type="button" name="Num30" value="0,3">
+		<input type="button" name="Num40" value="0,4"><br>
+		<input type="button" name="Num11" value="1,1">
+		<input type="button" name="Num21" value="1,2">
+		<input type="button" name="Num31" value="1,3">
+		<input type="button" name="Num41" value="1,4"><br>
+		<input type="button" name="Num12" value="2,1">
+		<input type="button" name="Num22" value="2,2">
+		<input type="button" name="Num32" value="2,3">
+		<input type="button" name="Num42" value="2,4"><br>
+		<input type="button" name="Num13" value="3,1">
+		<input type="button" name="Num23" value="3,2">
+		<input type="button" name="Num33" value="3,3">
+		<input type="button" name="Num43" value="3,4"><br>
+		<input type="button" name="initRote" value="初期化">
+	</form>
+	<div id="rsuOut">test</div>
+	<input type="range" value="5" min="1" max="25" id="time" />
+	<div id="one">&nbsp;</div>
+	<input type="range" value="210" min="0" max="628" id="vecX" />
+	<div id="two">&nbsp;</div>
+	<input type="range" value="0" min="0" max="628" id="vecY" />
+	<div id="three">&nbsp;</div>
+	<input type="range" value="157" min="0" max="628" id="vecZ" />
+	<div id="four">&nbsp;</div>
+	<div id="mmm">&nbsp;</div>
+	</div>
+</div>
+</body>
+</html>
